@@ -1,0 +1,216 @@
+2026-05-14 02:36:58.75
+27bf867c
+System
+metasidecar: loaded enterprise status from environment is_enterprise=false
+2026-05-14 02:36:58.75
+27bf867c
+System
+forwarding local port 3000 to external port 80 (mapped as 1104)
+2026-05-14 02:36:58.75
+27bf867c
+System
+run command failed
+2026-05-14 02:36:58.75
+27bf867c
+System
+failed to start command [python manage.py runserver 0.0.0.0:3000]: exec: "python": executable file not found in $PATH
+2026-05-14 02:40:21.35
+ffe936bf
+System
+starting up user application
+2026-05-14 02:40:21.35
+ffe936bf
+System
+metasidecar: loaded enterprise status from environment is_enterprise=false
+2026-05-14 02:40:21.35
+ffe936bf
+System
+forwarding local port 3000 to external port 80 (mapped as 1104)
+2026-05-14 02:40:21.35
+ffe936bf
+System
+failed to start command [python3 manage.py runserver 0.0.0.0:3000]: exec: "python3": executable file not found in $PATH
+2026-05-14 02:40:21.35
+ffe936bf
+System
+run command failed
+2026-05-14 02:44:03.64
+a507e356
+System
+starting up user application
+2026-05-14 02:44:03.64
+a507e356
+System
+metasidecar: loaded enterprise status from environment is_enterprise=false
+2026-05-14 02:44:03.65
+a507e356
+System
+forwarding local port 3000 to external port 80 (mapped as 1104)
+2026-05-14 02:44:03.96
+a507e356
+User
+ModuleNotFoundError: No module named 'django'
+2026-05-14 02:44:03.96
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:03.96
+a507e356
+User
+from django.core.management import execute_from_command_line
+2026-05-14 02:44:03.96
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 13, in main
+2026-05-14 02:44:03.96
+a507e356
+User
+raise ImportError(
+2026-05-14 02:44:03.96
+a507e356
+User
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+2026-05-14 02:44:03.96
+a507e356
+User
+main()
+2026-05-14 02:44:03.96
+a507e356
+User
+The above exception was the direct cause of the following exception:
+2026-05-14 02:44:03.96
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 11, in main
+2026-05-14 02:44:03.96
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 22, in <module>
+2026-05-14 02:44:03.96
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:04.04
+a507e356
+User
+ModuleNotFoundError: No module named 'django'
+2026-05-14 02:44:04.04
+a507e356
+User
+from django.core.management import execute_from_command_line
+2026-05-14 02:44:04.04
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:04.04
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 11, in main
+2026-05-14 02:44:12.65
+a507e356
+User
+The above exception was the direct cause of the following exception:
+2026-05-14 02:44:12.65
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:12.65
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 11, in main
+2026-05-14 02:44:12.65
+a507e356
+User
+ModuleNotFoundError: No module named 'django'
+2026-05-14 02:44:12.65
+a507e356
+User
+from django.core.management import execute_from_command_line
+2026-05-14 02:44:12.65
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:12.65
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 22, in <module>
+2026-05-14 02:44:12.65
+a507e356
+User
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+2026-05-14 02:44:12.65
+a507e356
+User
+raise ImportError(
+2026-05-14 02:44:12.65
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 13, in main
+2026-05-14 02:44:12.65
+a507e356
+User
+main()
+2026-05-14 02:44:12.65
+a507e356
+System
+command finished with error [python3 manage.py runserver 0.0.0.0:3000]: exit status 1
+2026-05-14 02:44:16.06
+a507e356
+User
+from django.core.management import execute_from_command_line
+2026-05-14 02:44:16.06
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 11, in main
+2026-05-14 02:44:16.06
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:16.06
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 22, in <module>
+2026-05-14 02:44:16.06
+a507e356
+User
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+2026-05-14 02:44:16.06
+a507e356
+User
+The above exception was the direct cause of the following exception:
+2026-05-14 02:44:16.06
+a507e356
+User
+Traceback (most recent call last):
+2026-05-14 02:44:16.06
+a507e356
+User
+raise ImportError(
+2026-05-14 02:44:16.06
+a507e356
+User
+ModuleNotFoundError: No module named 'django'
+2026-05-14 02:44:16.06
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 13, in main
+2026-05-14 02:44:16.06
+a507e356
+User
+main()
+2026-05-14 02:44:16.07
+a507e356
+System
+command finished with error [python3 manage.py runserver 0.0.0.0:3000]: exit status 1
+2026-05-14 02:44:26.04
+a507e356
+User
+main()
+2026-05-14 02:44:26.04
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 13, in main
+2026-05-14 02:44:26.04
+a507e356
+User
+File "/home/runner/workspace/manage.py", line 11, in main

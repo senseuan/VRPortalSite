@@ -1,0 +1,113 @@
+{% extends 'vr_site/base.html' %}
+{% load static %}
+
+{% block title %}VR-опыты{% endblock %}
+
+{% block content %}
+<h1>VR-опыты и приложения</h1>
+
+<div class="experiences-grid">
+    <div class="experience-card">
+        <div class="card-badge">Топ-1</div>
+        <h3>Half-Life: Alyx</h3>
+        <img src="{% static 'vr_site/images/halflife-alyx.jpg' %}" alt="Half-Life: Alyx">
+        <p>Шедевр VR-гейминга от Valve</p>
+        <div class="card-footer">
+            <span class="rating">★★★★★</span>
+            <span class="price">2999 ₽</span>
+        </div>
+    </div>
+
+    <div class="experience-card">
+        <div class="card-badge">Новинка</div>
+        <h3>Beat Saber</h3>
+        <img src="{% static 'vr_site/images/beatsaber.jpg' %}" alt="Beat Saber">
+        <p>Ритм-игра, покорившая мир</p>
+        <div class="card-footer">
+            <span class="rating">★★★★★</span>
+            <span class="price">1499 ₽</span>
+        </div>
+    </div>
+
+    <div class="experience-card">
+        <div class="card-badge">Хит</div>
+        <h3>Boneworks</h3>
+        <img src="{% static 'vr_site/images/boneworks.jpg' %}" alt="Boneworks">
+        <p>Физический симулятор с уникальной механикой</p>
+        <div class="card-footer">
+            <span class="rating">★★★★☆</span>
+            <span class="price">1999 ₽</span>
+        </div>
+    </div>
+
+    <div class="experience-card">
+        <h3>Superhot VR</h3>
+        <img src="{% static 'vr_site/images/superhot.jpg' %}" alt="Superhot VR">
+        <p>Время движется только когда движешься ты</p>
+        <div class="card-footer">
+            <span class="rating">★★★★★</span>
+            <span class="price">1299 ₽</span>
+        </div>
+    </div>
+
+    <div class="experience-card">
+        <h3>The Walking Dead: Saints & Sinners</h3>
+        <img src="{% static 'vr_site/images/walkingdead.jpg' %}" alt="The Walking Dead">
+        <p>Выживание в мире зомби</p>
+        <div class="card-footer">
+            <span class="rating">★★★★☆</span>
+            <span class="price">2499 ₽</span>
+        </div>
+    </div>
+
+    <div class="experience-card">
+        <h3>Pavlov VR</h3>
+        <img src="{% static 'vr_site/images/pavlov.jpg' %}" alt="Pavlov VR">
+        <p>Мультиплеерный шутер для VR</p>
+        <div class="card-footer">
+            <span class="rating">★★★★☆</span>
+            <span class="price">999 ₽</span>
+        </div>
+    </div>
+</div>
+
+<h2>Сравнение VR-гарнитур</h2>
+<div class="comparison-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Модель</th>
+                <th>Разрешение</th>
+                <th>Частота</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Meta Quest 3</td>
+                <td>2064x2208</td>
+                <td>120 Гц</td>
+                <td>499 $</td>
+            </tr>
+            <tr>
+                <td>Valve Index</td>
+                <td>1440x1600</td>
+                <td>144 Гц</td>
+                <td>999 $</td>
+            </tr>
+            <tr>
+                <td>PlayStation VR2</td>
+                <td>2000x2040</td>
+                <td>120 Гц</td>
+                <td>549 $</td>
+            </tr>
+            <tr>
+                <td>HTC Vive Pro 2</td>
+                <td>2448x2448</td>
+                <td>120 Гц</td>
+                <td>1399 $</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

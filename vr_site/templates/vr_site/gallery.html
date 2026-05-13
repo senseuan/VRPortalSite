@@ -1,0 +1,54 @@
+{% extends 'vr_site/base.html' %}
+{% load static %}
+
+{% block title %}Галерея VR{% endblock %}
+
+{% block content %}
+<h1>Галерея виртуальной реальности</h1>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="{% static 'vr_site/images/vr-gallery-1.jpg' %}" alt="VR гарнитура">
+        <div class="gallery-overlay">
+            <p>Современная VR-гарнитура</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="{% static 'vr_site/images/vr-gallery-2.jpg' %}" alt="VR геймплей">
+        <div class="gallery-overlay">
+            <p>Игровой процесс в VR</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="{% static 'vr_site/images/vr-gallery-3.jpg' %}" alt="VR установка">
+        <div class="gallery-overlay">
+            <p>Полный VR-комплект</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="{% static 'vr_site/images/vr-gallery-4.jpg' %}" alt="VR контроллеры">
+        <div class="gallery-overlay">
+            <p>Контроллеры нового поколения</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="{% static 'vr_site/images/vr-gallery-5.jpg' %}" alt="VR комната">
+        <div class="gallery-overlay">
+            <p>Пространство для VR-игр</p>
+        </div>
+    </div>
+    <div class="gallery-item">
+        <img src="{% static 'vr_site/images/vr-gallery-6.jpg' %}" alt="VR будущее">
+        <div class="gallery-overlay">
+            <p>Технологии будущего</p>
+        </div>
+    </div>
+</div>
+
+<div class="video-container">
+    <video width="100%" controls poster="{% static 'vr_site/images/vr-review-poster.jpg' %}">
+        <source src="{% static 'vr_site/videos/vr-review.mp4' %}" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+</div>
+{% endblock %}

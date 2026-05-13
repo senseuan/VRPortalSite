@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}VR World{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'vr_site/css/style.css' %}">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <span style="color: #9a6aff;">◉</span> VR World
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="{% url 'index' %}"
+                        class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Главная</a></li>
+                <li><a href="{% url 'experiences' %}"
+                        class="{% if request.resolver_match.url_name == 'experiences' %}active{% endif %}">VR-опыты</a>
+                </li>
+                <li><a href="{% url 'gallery' %}"
+                        class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 VR World. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
