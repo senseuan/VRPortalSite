@@ -60,11 +60,13 @@ def get_all_likes(request):
 
 
 def index(request):
-    reviews = VRReview.objects.all().order_by("-created_at")  # все отзывы, новые сверху
+    reviews = VRReview.objects.all().order_by("-created_at")
     if request.method == "POST":
         form = VRReviewForm(request.POST)
         if form.is_valid():
-            form.save()
+            review = form.save(commit=False)  # не сохраняем сразу
+            review.author = request.user  # привязываем автора
+            review.save()  # теперь сохраняем
             return redirect("index")
     else:
         form = VRReviewForm()
