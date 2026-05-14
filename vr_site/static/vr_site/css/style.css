@@ -614,6 +614,25 @@ button[type="submit"]:hover {
     transform: scale(1.02);
 }
 
+.logout-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: inherit;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #9a6aff;
+    color: #0a0a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(154, 106, 255, 0.5);
+    border-radius: 20px;
+}
+
 .errorlist {
     color: #ff6b6b;
     list-style: none;
