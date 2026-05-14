@@ -16,6 +16,13 @@
         </div>
         <nav class="nav-menu">
             <ul>
+                {% if user.is_authenticated %}
+                    <li><span style="color: #9a6aff;">Привет, {{ user.username }}</span></li>
+                    <li><a href="{% url 'logout' %}">Выйти</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Войти</a></li>
+                    <li><a href="{% url 'register' %}">Регистрация</a></li>
+                {% endif %}
                 <li><a href="{% url 'index' %}"
                         class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Главная</a></li>
                 <li><a href="{% url 'experiences' %}"
