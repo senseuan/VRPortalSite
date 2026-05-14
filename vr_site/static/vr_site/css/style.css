@@ -609,6 +609,36 @@ button[type="submit"] {
     transition: 0.3s;
 }
 
+.review-item {
+    background: rgba(154, 106, 255, 0.05);
+    border: 1px solid #4a2a6a;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.review-likes button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: transform 0.2s;
+}
+.review-likes button:hover {
+    transform: scale(1.1);
+}
+.likes-count, .dislikes-count {
+    font-size: 0.9rem;
+    margin-left: 5px;
+    color: #e0e0ff;
+}
+
 button[type="submit"]:hover {
     background: #b07cff;
     transform: scale(1.02);

@@ -13,4 +13,7 @@ urlpatterns = [
         name="login",
     ),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+    # Новые пути для лайков
+    path("like/", views.like_review, name="like_review"),
+    path("get-likes/", views.get_all_likes, name="get_all_likes"),
 ]

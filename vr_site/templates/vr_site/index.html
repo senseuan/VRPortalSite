@@ -1,18 +1,17 @@
 {% extends 'vr_site/base.html' %}
 {% load static %}
 
-{% block title %}Главная - VR World{% endblock %}
+{% block title %}VR World - Главная{% endblock %}
 
 {% block content %}
+
 <h1 style="color: #9a6aff;">Добро пожаловать в мир VR!</h1>
 <h2>Погрузитесь в виртуальную реальность</h2>
 <h3>Современные технологии будущего</h3>
 
 <div class="content-block">
-    <p><span class="highlight">Виртуальная реальность</span> — это технология, которая позволяет погрузиться в
-        искусственно созданный мир.</p>
-    <p><span style="font-weight: bold; color: #9a6aff;">VR-гарнитуры</span> — основное устройство для входа в
-        виртуальный мир.</p>
+    <p><span class="highlight">Виртуальная реальность</span> — это технология, которая позволяет погрузиться в искусственно созданный мир.</p>
+    <p><span style="font-weight: bold; color: #9a6aff;">VR-гарнитуры</span> — основное устройство для входа в виртуальный мир.</p>
 </div>
 
 <div class="fact-box">
@@ -55,29 +54,26 @@
         <li><a href="#about">О VR</a></li>
         <li><a href="#facts">Интересные факты</a></li>
         <li><a href="#hardware">VR-оборудование</a></li>
+        <li><a href="#reviews-section">Отзывы</a></li>
         <li><a href="#review-form">Оставить отзыв</a></li>
     </ul>
 </nav>
 
 <section id="about">
     <h3>О виртуальной реальности</h3>
-    <p>Виртуальная реальность (VR) — это технология, создающая искусственный мир, в который человек может погрузиться с
-        помощью специальных устройств. VR используется в играх, образовании, медицине и многих других сферах.</p>
+    <p>Виртуальная реальность (VR) — это технология, создающая искусственный мир, в который человек может погрузиться с помощью специальных устройств. VR используется в играх, образовании, медицине и многих других сферах.</p>
 </section>
 
 <section id="facts">
     <h3>Интересные факты о VR</h3>
     <div class="fact-grid">
-        <div
-            style="background: linear-gradient(135deg, #1a1a3a, #2a1a4a); padding: 20px; border-radius: 10px; border: 2px solid #9a6aff; margin: 10px;">
+        <div style="background: linear-gradient(135deg, #1a1a3a, #2a1a4a); padding: 20px; border-radius: 10px; border: 2px solid #9a6aff; margin: 10px;">
             <p>◉ Термин "виртуальная реальность" впервые использовал в 1987 году Джарон Ленье.</p>
         </div>
-        <div
-            style="background: linear-gradient(135deg, #1a1a3a, #2a1a4a); padding: 20px; border-radius: 10px; border: 2px solid #6a4a9a; margin: 10px;">
+        <div style="background: linear-gradient(135deg, #1a1a3a, #2a1a4a); padding: 20px; border-radius: 10px; border: 2px solid #6a4a9a; margin: 10px;">
             <p>◉ К 2025 году рынок VR достигнет 50 миллиардов долларов.</p>
         </div>
-        <div
-            style="background: linear-gradient(135deg, #1a1a3a, #2a1a4a); padding: 20px; border-radius: 10px; border: 2px solid #4a6aff; margin: 10px;">
+        <div style="background: linear-gradient(135deg, #1a1a3a, #2a1a4a); padding: 20px; border-radius: 10px; border: 2px solid #4a6aff; margin: 10px;">
             <p>◉ VR помогает лечить фобии и посттравматический синдром.</p>
         </div>
     </div>
@@ -104,6 +100,34 @@
     </div>
 </section>
 
+<!-- БЛОК С ОТЗЫВАМИ (лабораторная №6) -->
+<section id="reviews-section">
+    <h2>Отзывы пользователей</h2>
+    <div id="reviews-list">
+        {% for review in reviews %}
+            <div class="review-item" data-review-id="{{ review.id }}">
+                <div class="review-header">
+                    <strong>{{ review.username }}</strong> на гарнитуру <em>{{ review.headset_model }}</em>
+                    <span class="review-rating">Оценка: {{ review.rating }}★</span>
+                    <small>{{ review.created_at|date:"d.m.Y H:i" }}</small>
+                </div>
+                <div class="review-comment">{{ review.comment }}</div>
+                <div class="review-likes">
+                    <button class="like-btn" data-action="like">
+                        👍 <span class="likes-count">{{ review.likes_count }}</span>
+                    </button>
+                    <button class="dislike-btn" data-action="dislike">
+                        👎 <span class="dislikes-count">{{ review.dislikes_count }}</span>
+                    </button>
+                </div>
+            </div>
+        {% empty %}
+            <p>Пока нет отзывов. Будьте первым!</p>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- ФОРМА ДОБАВЛЕНИЯ ОТЗЫВА -->
 <section id="review-form">
     <h2>Оставить отзыв о VR-гарнитуре</h2>
     <form method="post">
@@ -112,4 +136,76 @@
         <button type="submit">Отправить отзыв</button>
     </form>
 </section>
+
+<script>
+    // Получение CSRF-токена из cookie
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const csrftoken = getCookie('csrftoken');
+
+        // Обработка кликов на кнопки лайк/дизлайк
+        document.querySelectorAll('.like-btn, .dislike-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const reviewItem = this.closest('.review-item');
+                const reviewId = reviewItem.dataset.reviewId;
+                const action = this.dataset.action;
+
+                fetch('/like/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': csrftoken
+                    },
+                    body: JSON.stringify({ review_id: reviewId, action: action })
+                })
+                .then(response => {
+                    if (response.status === 403) {
+                        alert('Пожалуйста, войдите, чтобы оценивать отзывы.');
+                        return;
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data) {
+                        reviewItem.querySelector('.likes-count').textContent = data.likes;
+                        reviewItem.querySelector('.dislikes-count').textContent = data.dislikes;
+                    }
+                });
+            });
+        });
+
+        // Polling – обновление счётчиков лайков у всех пользователей каждые 5 секунд
+        function updateAllLikes() {
+            fetch('/get-likes/')
+            .then(response => response.json())
+            .then(data => {
+                for (let reviewId in data) {
+                    const reviewDiv = document.querySelector(`.review-item[data-review-id="${reviewId}"]`);
+                    if (reviewDiv) {
+                        reviewDiv.querySelector('.likes-count').textContent = data[reviewId].likes;
+                        reviewDiv.querySelector('.dislikes-count').textContent = data[reviewId].dislikes;
+                    }
+                }
+            });
+        }
+
+        setInterval(updateAllLikes, 5000);  // обновление каждые 5 секунд
+    });
+</script>
+
 {% endblock %}
