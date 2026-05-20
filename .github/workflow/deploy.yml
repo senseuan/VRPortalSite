@@ -1,0 +1,45 @@
+name: Deploy Django App
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run migrations
+      run: |
+        python manage.py migrate
+
+    - name: Collect static files
+      run: |
+        python manage.py collectstatic --noinput
+
+    - name: Run tests (optional)
+      run: |
+        python manage.py test
+
+    - name: Deploy to Replit
+      env:
+        REPLIT_API_KEY: ${{ secrets.REPLIT_API_KEY }}
+        REPLIT_URL: ${{ secrets.REPLIT_URL }}
+      run: |
+        echo "Deployment triggered!"
+        # Можно добавить скрипт для деплоя на Replit через API

@@ -1,0 +1,20 @@
+# Виртуальное окружение
+venv/
+env/
+.pythonlibs/
+
+# База данных 
+db.sqlite3
+
+vr_site/static/vr_site/images/*.mp4
+
+# Миграции (можно не хранить, но лучше хранить)
+# __pycache__/
+*.pyc
+*.pyo
+
+# Логи
+*.log
+
+# Django
+staticfiles/
