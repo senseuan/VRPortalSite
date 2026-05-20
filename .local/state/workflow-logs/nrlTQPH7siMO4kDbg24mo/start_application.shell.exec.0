@@ -1,0 +1,62 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 20, 2026 - 07:24:16
+Django version 5.2.14, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CONTROL-C.
+
+[33;1mWARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/[0m
+[20/May/2026 07:24:18] [m"GET / HTTP/1.1" 200 9934[0m
+[20/May/2026 07:24:18] [m"GET /static/vr_site/css/style.css HTTP/1.1" 200 12864[0m
+[20/May/2026 07:24:19] [m"GET /static/vr_site/images/vr-headset.jpg HTTP/1.1" 200 5628[0m
+[20/May/2026 07:24:19] [m"GET /static/vr_site/images/vr-controllers.jpg HTTP/1.1" 200 10014[0m
+[20/May/2026 07:24:19] [m"GET /static/vr_site/images/vr-sensors.jpg HTTP/1.1" 200 8798[0m
+[20/May/2026 07:24:24] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:24:29] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:24:34] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:24:39] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:24:44] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:24:49] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:24:54] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:00] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:04] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:09] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:14] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:19] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:24] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:42] [m"GET / HTTP/1.1" 200 9934[0m
+[20/May/2026 07:25:48] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:53] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:25:58] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:03] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:08] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:13] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:18] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:23] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:28] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:33] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:38] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:43] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:48] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:53] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:26:58] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:03] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:08] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:13] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:18] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:23] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:28] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:33] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:38] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:43] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:48] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:53] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:27:58] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:28:03] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:28:08] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:28:13] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:28:18] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
+[20/May/2026 07:28:23] [m"GET /get-likes/ HTTP/1.1" 200 2[0m
